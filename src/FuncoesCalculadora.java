@@ -12,5 +12,39 @@ public class FuncoesCalculadora {
 		System.out.println("6 - Sair");
 
 	}
+	
+	public static double somar(double valor1, double valor2) {
+
+		System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
+		double soma;
+		soma = valor1 + valor2;
+		return soma;
+	}
+	
+	public static double subtrair(double valor1, double valor2) {
+
+		System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
+		double subtracao;
+		subtracao = valor1 - valor2;
+		return subtracao;
+	}
+
+	public static double dividir(double valor1, double valor2) {
+
+		System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
+		double divisao;
+		divisao = valor1 / valor2;
+		return divisao;
+
+	}
+	
+	public static double multiplicar(double valor1, double valor2) {
+
+		System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
+		double multiplicacao;
+		multiplicacao = valor1 * valor2;
+		return multiplicacao;
+
+	}
 
 }

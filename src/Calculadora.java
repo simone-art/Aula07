@@ -2,61 +2,49 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-	public static void exibirMenu() {
-		System.out.println("PROGRAMA CALCULADORA");
-		System.out.println("Escolha sua opção!");
-		System.out.println("1 - Digitar valores");
-		System.out.println("2 - Realizar soma");
-		System.out.println("3 - Realizar subtração");
-		System.out.println("4 - Realizar divisão");
-		System.out.println("5 - Realizar multiplicação");
-		System.out.println("6 - Sair");
-
-	}
-
 	// Argumento ou parâmetro é um valor preexistente para que a função funcione
-	public static double somar(double valor1, double valor2) {
+//	public static double somar(double valor1, double valor2) {
+//
+//		System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
+//		double soma;
+//		soma = valor1 + valor2;
+//		return soma;
+//	}
+//
+//	public static double subtrair(double valor1, double valor2) {
+//
+//		System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
+//		double subtracao;
+//		subtracao = valor1 - valor2;
+//		return subtracao;
+//	}
+//
+//	public static double dividir(double valor1, double valor2) {
+//
+//		System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
+//		double divisao;
+//		divisao = valor1 / valor2;
+//		return divisao;
+//
+//	}
 
-		System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
-		double soma;
-		soma = valor1 + valor2;
-		return soma;
-	}
-
-	public static double subtrair(double valor1, double valor2) {
-
-		System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
-		double subtracao;
-		subtracao = valor1 - valor2;
-		return subtracao;
-	}
-
-	public static double dividir(double valor1, double valor2) {
-
-		System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
-		double divisao;
-		divisao = valor1 / valor2;
-		return divisao;
-
-	}
-
-	public static double multiplicar(double valor1, double valor2) {
-
-		System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
-		double multiplicacao;
-		multiplicacao = valor1 * valor2;
-		return multiplicacao;
-
-	}
+//	public static double multiplicar(double valor1, double valor2) {
+//
+//		System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
+//		double multiplicacao;
+//		multiplicacao = valor1 * valor2;
+//		return multiplicacao;
+//
+//	}
 
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		double valor1 = 0, valor2 = 0;
-		double soma, subtracao, divisao, multiplicacao;
+		//double soma, subtracao, divisao, multiplicacao;
 		int opcao = 0;
 
 		while (opcao != 6) {
-			exibirMenu();
+			FuncoesCalculadora.exibirMenu();
 			opcao = leitor.nextInt();
 
 			switch (opcao) {
@@ -68,16 +56,16 @@ public class Calculadora {
 				System.out.println("Os valores " + valor1 + " e " + valor2 + " foram armazenados\n\n");
 				break;
 			case 2:
-				System.out.println("A soma é: " + somar(valor1, valor2));
+				System.out.println("A soma é: " + FuncoesCalculadora.somar(valor1, valor2));
 				break;
 			case 3:
-				System.out.println("A subtração é: " + subtrair(valor1, valor2));
+				System.out.println("A subtração é: " + FuncoesCalculadora.subtrair(valor1, valor2));
 				break;
 			case 4:
-				System.out.println("A divisão é: " + dividir(valor1, valor2));
+				System.out.println("A divisão é: " + FuncoesCalculadora.dividir(valor1, valor2));
 				break;
 			case 5:
-				System.out.println("A multiplicação é: " + multiplicar(valor1, valor2));
+				System.out.println("A multiplicação é: " + FuncoesCalculadora.multiplicar(valor1, valor2));
 				break;
 			case 6:
 				System.out.println("Saindo do sistema");
